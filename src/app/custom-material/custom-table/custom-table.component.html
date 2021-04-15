@@ -1,0 +1,16 @@
+<div>
+    <table mat-table [dataSource]="dataSource">
+        <ng-container matColumnDef="coin_name">
+            <th mat-header-cell *matHeaderCellDef> Coin Name </th>
+            <td mat-cell *matCellDef="let element"> {{element.coin_name}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="coin_id">
+            <th mat-header-cell *matHeaderCellDef> Coin ID </th>
+            <td mat-cell *matCellDef="let element"> {{element.coin_id}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="columns"></tr>
+        <tr mat-row *matRowDef="let row; columns: columns;"></tr>
+    </table>
+</div>
